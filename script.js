@@ -1,19 +1,24 @@
-//index.js
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 
-const hamburger = document.getElementById('hamburger'); 
-const menu = document.querySelector('.menu'); 
+// Responsive navigation menu
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', function () { 
-    const hamIcon = this.querySelector('.hamburger-icon'); 
-    const crossIcon = this.querySelector('.cross-icon'); 
-    if (hamIcon.style.display === "none") { 
-        hamIcon.style.display = "inline-block"
-        menu.style.display = "none"
-        crossIcon.style.display = "none"
-    } 
-    else { 
-        crossIcon.style.display = "inline-block"
-        hamIcon.style.display = "none"
-        menu.style.display = "block"
-    } 
+navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// Close the navigation menu when a link is clicked
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
 });
