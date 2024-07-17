@@ -5,44 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yannick Atabong - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Code injected by live-server -->
-    <script>
-        // <![CDATA[  <-- For SVG support
-        if ('WebSocket' in window) {
-            (function () {
-                function refreshCSS() {
-                    var sheets = [].slice.call(document.getElementsByTagName("link"));
-                    var head = document.getElementsByTagName("head")[0];
-                    for (var i = 0; i < sheets.length; ++i) {
-                        var elem = sheets[i];
-                        var parent = elem.parentElement || head;
-                        parent.removeChild(elem);
-                        var rel = elem.rel;
-                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-                        }
-                        parent.appendChild(elem);
-                    }
-                }
-                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-                var address = protocol + window.location.host + window.location.pathname + '/ws';
-                var socket = new WebSocket(address);
-                socket.onmessage = function (msg) {
-                    if (msg.data == 'reload') window.location.reload();
-                    else if (msg.data == 'refreshcss') refreshCSS();
-                };
-                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-                    console.log('Live reload enabled.');
-                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-                }
-            })();
-        }
-        else {
-            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-        }
-        // ]]>
-    </script>
 </head>
 <body>
     <header>
@@ -56,6 +18,7 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#goals">Goals</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -64,7 +27,7 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>As a Security Research Engineer at HackerOne, I am passionate about safeguarding digital assets and ensuring the integrity of information systems. My tech journey spans roles from a Technical Support Engineer to most recently a Security Research Engineer focusing on ethical hacking and cybersecurity. Let's connect and explore opportunities to innovate, collaborate, and build a safer digital world together. Whether you're looking to fortify your web applications or share insights on the latest security trends, I'm excited to connect with fellow professionals who share a passion for cybersecurity</p>
+        <p>As a Security Research Engineer at HackerOne, I am passionate about safeguarding digital assets and ensuring the integrity of information systems. My tech journey spans roles from a Technical Support Engineer to most recently a Security Research Engineer focusing on ethical hacking and cybersecurity. Let's connect and explore opportunities to innovate, collaborate, and build a safer digital world together. Whether you're looking to fortify your web applications or share insights on the latest security trends, I'm excited to connect with fellow professionals who share a passion for cybersecurity.</p>
     </section>
 
     <section id="experience">
@@ -227,47 +190,41 @@
         <div class="certification">
             <h3>MITRE ATT&CK Defender™ (MAD) Cyber Threat Intelligence Certification Training</h3>
             <p><strong>Issuers:</strong> Cybrary, MITRE</p>
-            <p><strong>Issued:</strong> June 2023</p>
+            <p><strong>Issued:</strong> June 2023</p>      
         </div>
     </section>
 
     <section id="skills">
         <h2>Skills</h2>
-        <div class="skills">
-            <h3>Cybersecurity Research</h3>
-            <p>Threat intelligence, malware analysis, vulnerability assessment, incident response</p>
-        </div>
-        <div class="skills">
-            <h3>Penetration Testing</h3>
-            <p>Network penetration testing, web application penetration testing, ethical hacking</p>
-        </div>
-        <div class="skills">
-            <h3>Python Programming</h3>
-            <p>Scripting, automation, data analysis, web scraping</p>
-        </div>
-        <div class="skills">
-            <h3>Linux System Administration</h3>
-            <p>Server management, security hardening, bash scripting, command-line tools</p>
-        </div>
-        <div class="skills">
-            <h3>Web Application Security</h3>
-            <p>OWASP top 10 vulnerabilities, secure coding practices, web security testing</p>
-        </div>
+        <ul>
+            <li>Cybersecurity Research</li>
+            <li>Penetration Testing</li>
+            <li>Python Programming</li>
+            <li>Linux System Administration</li>
+            <li>Web Application Security</li>
+        </ul>
     </section>
 
     <section id="goals">
         <h2>Goals</h2>
-        <p>Continuously expand expertise in cybersecurity research and penetration testing. Obtain Offensive Security Certified Professional (OSCP) certification by November 2024.</p>
+        <p>My immediate goal is to obtain the Offensive Security Certified Professional (OSCP) certification by November 2024. This will further enhance my skills in penetration testing and ethical hacking, allowing me to contribute more effectively to the cybersecurity community.</p>
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: YannickAtabong6@gmail.com<br>
-        LinkedIn: <a href="https://www.linkedin.com/in/yannick-atabong-6bb426200/">Yannick Atabong</a></p>
+        <p><strong>Email:</strong> <a href="mailto:YannickAtabong6@gmail.com">YannickAtabong6@gmail.com</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/YannickAtabong9/">Yannick Atabong</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yannick-atabong-6bb426200/">Yannick Atabong</a></p>
     </section>
 
     <footer>
         <p>&copy; 2024 Yannick Atabong. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('nav-menu-visible');
+        });
+    </script>
 </body>
 </html>
